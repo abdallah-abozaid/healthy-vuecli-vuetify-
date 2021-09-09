@@ -1,0 +1,64 @@
+<template>
+    <div class="user1 pt-16">
+        <p class="display-2 text-center">Sign in to Diprella</p>
+         <v-row
+        align="center"
+        justify="center"
+        style="height:100px"
+      >
+        <v-btn-toggle
+          v-model="toggle_exclusive"
+          background-color="transparent"
+        >
+          <v-btn class="mx-2 py-7 rounded-circle transparent"  >
+            <v-icon color="blue" large>mdi-facebook</v-icon>
+          </v-btn>
+          <v-btn class="mx-2 py-7 rounded-circle transparent"  >
+            <v-icon color="black" large>mdi-gmail</v-icon>
+          </v-btn>
+          <v-btn class="mx-2 py-7 rounded-circle transparent"  >
+            <v-icon color="red" large>mdi-linkedin</v-icon>
+          </v-btn>
+        </v-btn-toggle>
+         </v-row>
+         <p class="text-center">Ensure Your Email for Regestration</p>
+         <div class="pa-4">
+         <v-text-field
+            label="Email"
+            prepend-icon="mdi-gmail"
+            class="mb-5"
+          ></v-text-field>
+          <v-text-field
+            label="password"
+            prepend-icon="mdi-lock"
+          ></v-text-field>
+         </div>
+         <p class="text-center my-6">Forget Your Password ? </p>
+         <v-btn color="#00868A" dark class="sign-btn">Sign IN</v-btn>
+    </div>
+</template>
+<script>
+export default {
+    name:"user1",
+    data:()=>({
+        toggle_exclusive:1
+    })
+}
+</script>
+<style scoped>
+.user1 .display-2{
+    color: #00868A;
+    font-weight: 400;
+}
+
+.user1 .v-btn{
+    border:none;
+}
+.user1 .sign-btn{
+    width: 30%;
+    margin-left: 35%;
+}
+.user1{
+  height:100%!important;
+}
+</style>
